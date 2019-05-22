@@ -4,14 +4,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
     class Kaleidoscript {
 
     	run(text){
-    		this.buildResponse(this.scramble(text));
+    		this.renderResponse(this.buildResponse(this.scramble(text)));
+    	}
+
+
+    	renderResponse(elem){
+    		const responses = document.getElementById("responses")
+    		responses.appendChild(elem);
+    		responses.scrollTo(0, responses.scrollHeight);
     	}
 
     	buildResponse(text){
     		let result = document.createElement("div");
     		result.setAttribute("class", "response")
     		result.innerText = text;
-    		document.body.appendChild(result)
+    		return result;
     	}
 
 		scramble(text){
@@ -25,13 +32,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			} 
 			return result
 		}
-
 	}
 
-	const kaw = new Kaleidoscript();
-	const submit = document.getElementById("submit");
-	const input = document.getElementById("input");
-	submit.addEventListener("mouseup", (text) => {kaw.run(input.value)});
-
+	const instance = new Kaleidoscript();
+	const submit = document.getElementById("submit-button");
+	const input = document.getElementById("input-field");
+	submit.addEventListener("mouseup", (text) => {instance.run(input.value)});
+	window.addEventListener("keypress", (event) => {
+		if(event.which == 13){
+			event.preventDefault();
+			instance.run(input.value);
+		}	
+	});
 });
 
