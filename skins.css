@@ -1,0 +1,28 @@
+/*Font and Text classes: */
+.sonsie {
+	font-family: 'Sonsie One', cursive;
+	font-style: italic;
+}
+
+.text-org { color: F46036; }
+
+.text-light { color: #EFF1F3;} 
+
+.text-vintage {color: #fdf7e1; }
+
+/*Background classes: */
+.bg-vintage { background-color: #fdf7e1; }
+
+.bg-dark { background-color: #212628; }
+
+.bg-prl-blue { background-image: linear-gradient(#5F5AA2,#355691); }
+
+.bg-org-prl { background-image: linear-gradient(to bottom right, #F46036, #355691); }
+
+/*Other:*/
+.border {
+	border: 1px solid black;
+	border-radius: 0.25rem;
+}
+
+

@@ -3,10 +3,16 @@ html {
 }
 
 body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: 10% 87%;
-  grid-template-columns: 5% 90% 5%;
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: 9% 87%;
+	grid-template-columns: 5% 90% 5%;
+	background-repeat: no-repeat;
+	overflow-y: hidden;
+}
+
+.pad {
+	padding: 1rem;
 }
 
 .gutter {
@@ -39,26 +45,23 @@ header {
 	grid-column-end: 3;
 	display: grid;
 	grid-template-rows: 500px 100px;
-	border: 1px solid black;
-
 }
+
+.response { margin: 15px 0;}
 
 #responses {
 	grid-row-start: 1;
-	grid-row-end: 2;
-	border: 1px solid black;
+	grid-row-end: 3;
 	overflow-y: scroll;
 }
 
-.response {
-	margin: 15px 0;
-}
 
 #ui {
 	display: inline-grid;
-	grid-row-start: 2;
-  	grid-row-end: 3;
+	grid-row-start: 3;
+  	grid-row-end: 4;
   	grid-template-columns: 90% 10%;
+  	margin-top: 10px;
 }
 
 #input {
@@ -67,10 +70,11 @@ header {
 }
 
 #input-field {
+	resize: none;
 	width: 90%;
-	height: 100px;
-	border: 1px solid black;
-	border-radius: .25em;
+	height: 140px;
+	margin-left: 3vw;
+	font-size: 18px; 
 }
 
 

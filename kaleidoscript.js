@@ -7,7 +7,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     		this.renderResponse(this.buildResponse(this.scramble(text)));
     	}
 
-
     	renderResponse(elem){
     		const responses = document.getElementById("responses")
     		responses.appendChild(elem);
@@ -16,7 +15,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     	buildResponse(text){
     		let result = document.createElement("div");
-    		result.setAttribute("class", "response")
+    		result.setAttribute("class", "response border pad bg-vintage")
     		result.innerText = text;
     		return result;
     	}
