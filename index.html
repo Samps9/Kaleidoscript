@@ -6,23 +6,27 @@
 	<script type="text/javascript" src="kaleidoscript.js"></script>
 	<link rel="stylesheet" type="text/css" href="structures.css">
 	<link rel="stylesheet" type="text/css" href="skins.css">
-	<link href="https://fonts.googleapis.com/css?family=Sonsie+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Raleway&display=swap" rel="stylesheet">
+
 </head>
-<body class="bg-prl-blue sonsie">
+<body class="bg grid">
 	<div class="gutter left"></div>
-	<header>
-		<h1>KALEIDOSCRIPT</h1>
+	<header class="row-1-2 col-2-3">
+		<h1 class="raleway text-dark">KALEIDOSCRIPT</h1>
 	</header>
-	<div id="main">
-		<div id="responses" class="border bg-dark pad"></div>
-		<div id="ui">
-			<div id="input">
-				<textarea id="input-field" class="bg-vintage pad"></textarea>
+	<div id="main" class="grid row-2-3 col-2-3">
+
+		<div id="ui" class="grid row-1-2">
+			<div id="input" class="row-1-2">
+				<textarea id="input-field" class="bg-vintage pad inconsolata border box-shadow in-out"></textarea>
 			</div>
-			<div id="submit">
-				<div id="submit-button" class="bg-vintage pad">^</div>
+			<div id="submit" class="row-2-3">
+				<div id="submit-button" class="bg-vintage pad border box-shadow">^</div>
 			</div>
 		</div>
+
+		<div id="responses" class="row-1-2 border bg-dark pad in-out"></div>
+
 	</div>		
 	<div class="gutter right"></div>
 </body>

@@ -4,15 +4,30 @@ html {
 
 body {
 	min-height: 100%;
-	display: grid;
 	grid-template-rows: 9% 87%;
 	grid-template-columns: 5% 90% 5%;
-	background-repeat: no-repeat;
 	overflow-y: hidden;
 }
 
+.grid { display: grid; }
+
 .pad {
 	padding: 1rem;
+}
+
+.row-1-2 {
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+.row-2-3 {
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+.col-2-3 {
+	grid-column-start: 2;
+	grid-column-end: 3;
 }
 
 .gutter {
@@ -30,63 +45,32 @@ body {
 	grid-column-end: 4;
 }
 
-header {
-	grid-row-start: 1;
-	grid-row-end: 2;
-	grid-column-start: 2;
-	grid-column-end: 3;
-	text-align: center;
-}
+header { text-align: center; }
 
 #main {
-	grid-row-start: 2;
-	grid-row-end: 3;
-	grid-column-start: 2;
-	grid-column-end: 3;
-	display: grid;
-	grid-template-rows: 500px 100px;
+	grid-template-rows: 90% 10%;
+	grid-template-columns: 50%;
 }
 
-.response { margin: 15px 0;}
+.in-out { height: 500px; }
 
-#responses {
-	grid-row-start: 1;
-	grid-row-end: 3;
-	overflow-y: scroll;
-}
+#responses { overflow-y: scroll; }
 
+.response { margin: 15px 0; }
 
 #ui {
-	display: inline-grid;
-	grid-row-start: 3;
-  	grid-row-end: 4;
-  	grid-template-columns: 90% 10%;
-  	margin-top: 10px;
-}
-
-#input {
-	grid-row-start: 1;
-  	grid-row-end: 2;
+  	grid-gap: 40px;
+  	grid-template-rows: 500px 10px;	
 }
 
 #input-field {
 	resize: none;
-	width: 90%;
-	height: 140px;
-	margin-left: 3vw;
+	width: 95%;
 	font-size: 18px; 
 }
 
-
-#submit {
-	grid-row-start: 1;
-  	grid-row-end: 2;
-}
-
 #submit-button {
-	border: 1px solid black;
-	border-radius: .25em;
 	text-align: center;
 	padding: 5px 0; 
-	width: 60%;
+	width: 80%;
 }

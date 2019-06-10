@@ -8,14 +8,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     	}
 
     	renderResponse(elem){
-    		const responses = document.getElementById("responses")
+    		const responses = document.getElementById("responses");
     		responses.appendChild(elem);
     		responses.scrollTo(0, responses.scrollHeight);
     	}
 
     	buildResponse(text){
     		let result = document.createElement("div");
-    		result.setAttribute("class", "response border pad bg-vintage")
+    		result.setAttribute("class", "response border pad bg-vintage inconsolata");
     		result.innerText = text;
     		return result;
     	}
@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 				result += word + " ";
 				text.splice(wordIndex, 1);
 			} 
-			return result
+			return result;
 		}
 	}
 
@@ -37,8 +37,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	const submit = document.getElementById("submit-button");
 	const input = document.getElementById("input-field");
 	submit.addEventListener("mouseup", (text) => {instance.run(input.value)});
-	window.addEventListener("keypress", (event) => {
-		if(event.which == 13){
+	input.addEventListener("keypress", (event) => {
+		if(event.which == 13 && !event.shiftKey){
 			event.preventDefault();
 			instance.run(input.value);
 		}	
