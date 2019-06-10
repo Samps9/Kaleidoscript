@@ -1,0 +1,41 @@
+/*Font and Text classes: */
+.raleway { font-family: 'Raleway', arial; }
+
+.inconsolata { font-family: 'Inconsolata', monospace; }
+
+.text-dark { color: #212628; }
+
+/*Background classes: */
+.bg { 
+	background: 
+	-webkit-linear-gradient(rgba(239, 241, 243, 0.9), rgba(239, 241, 243, 0.9));
+	background: 
+	-o-linear-gradient(rgba(239, 241, 243, 0.9), rgba(239, 241, 243, 0.9));
+	background: 
+	linear-gradient(rgba(239, 241, 243, 0.9), rgba(239, 241, 243, 0.9));
+}
+
+.bg-vintage { background-color: #fdf7e1; }
+
+.bg-dark { background-color: #212628; }
+
+/*Other:*/
+.border {
+	border: 1px solid #212628;
+	border-radius: 0.25rem;
+}
+
+.box-shadow {
+	-webkit-box-shadow: inset 0 0 5px #212628;
+    -moz-box-shadow: inset 0 0 5px #212628;
+    box-shadow: inset 0 0 5px #212628;
+}
+
+#submit-button:hover {
+	font-style: italic;
+	-webkit-box-shadow: inset 0 0 5px #EFF1F3;
+    -moz-box-shadow: inset 0 0 5px #EFF1F3;
+    box-shadow: inset 0 0 5px #EFF1F3;
+}
+
+
