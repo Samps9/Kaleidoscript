@@ -1,6 +1,4 @@
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded and parsed');
-
     class Kaleidoscript {
 
     	run(text) {
@@ -23,7 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		scramble(text) {
 			let result = "";
 			if (text.length == 0) {
-    			console.log("KAW")
     			result = "Thank you for showing your curiosity! Try adding and submitting text to the input field for more interesting results..."
     		} else {
 				text = text.split(" ");
@@ -36,18 +33,27 @@ window.addEventListener('DOMContentLoaded', () => {
 			}
 			return result;
 		}
+
+		clear() {
+			let responses = document.getElementsByClassName("response");
+			while (responses[0]) {
+				responses[0].remove();
+			}
+		}
 	}
 
 	const instance = new Kaleidoscript();
 	const submit = document.getElementById("submit-button");
 	const input = document.getElementById("input-field");
+	const clear = document.getElementById("clear")
 
-	submit.addEventListener("mouseup", (text) => {instance.run(input.value)});
+	submit.addEventListener("mouseup", () => { instance.run(input.value) });
 	input.addEventListener("keypress", (event) => {
 		if(event.which == 13 && !event.shiftKey) {
 			event.preventDefault();
 			instance.run(input.value);
 		}	
 	});
+	clear.addEventListener("mouseup", () => { instance.clear() });
 });
 

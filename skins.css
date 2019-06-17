@@ -5,6 +5,8 @@
 
 .text-dark { color: #212628; }
 
+.text-light { color: #eff1f3e6; }
+
 /*Background classes: */
 .bg { 
 	background: 
@@ -31,11 +33,12 @@
     box-shadow: inset 0 0 5px #212628;
 }
 
-#submit-button:hover {
+.button:hover {
 	font-style: italic;
 	-webkit-box-shadow: inset 0 0 5px #EFF1F3;
     -moz-box-shadow: inset 0 0 5px #EFF1F3;
     box-shadow: inset 0 0 5px #EFF1F3;
+    cursor: pointer;
 }
 
 
