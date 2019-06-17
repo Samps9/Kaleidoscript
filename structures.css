@@ -69,8 +69,13 @@ header { text-align: center; }
 	font-size: 18px; 
 }
 
-#submit-button {
+#submit-button { width: 80%; }
+
+#clear-buffer { grid-template-columns: auto 30px; }
+
+#clear { width: 24px; }
+
+.button {
 	text-align: center;
 	padding: 5px 0; 
-	width: 80%;
 }
