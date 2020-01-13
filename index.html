@@ -10,23 +10,38 @@
 
 </head>
 <body class="bg grid">
+	<div id="modal" class="hide">
+		<div class="modal-content raleway">
+			If you want to chat with the proverbial deus ex machina, you have come to the right place. 
+		</div>
+		<div class="modal-content raleway">
+			Enter and submit a message into the textbox and receive a response in Kaleidoscript, a shattered reflection of your own words. 
+		</div>
+		<div class="modal-content raleway">
+			Kaleidoscript randomizes words, characters and white spaces in whatever message was entered and displays it for you to ponder over. 
+		</div>
+	</div>
+	
 	<div class="gutter left"></div>
 	<header class="row-1-2 col-2-3">
-		<h1 class="raleway text-dark">KALEIDOSCRIPT</h1>
+		<h1 id="header-text" class="raleway text-dark pointer tooltip">
+			KALEIDOSCRIPT
+			<span class="tooltip-content">What's going on here?</span>
+		</h1>
 	</header>
 	<div id="main" class="grid row-2-3 col-2-3">
 		<div id="ui" class="grid row-1-2">
 			<div id="input" class="row-1-2">
-				<textarea id="input-field" class="bg-vintage pad inconsolata border box-shadow in-out" placeholder="Type/paste text here. Then press enter or the '^' button below"></textarea>
+				<textarea id="input-field" class="bg-vintage pad inconsolata border box-shadow in-out" placeholder="Type/paste text here. Then press enter or the button below (^) to get a response."></textarea>
 			</div>
 			<div id="submit" class="row-2-3">
-				<div id="submit-button" class="bg-vintage pad border box-shadow button">^</div>
+				<div id="submit-button" class="bg-vintage pad border box-shadow button pointer">^</div>
 			</div>
 		</div>
 		<div id="responses" class="row-1-2 border bg-dark pad in-out">
 			<div id="clear-buffer" class="grid">
 				<div></div>
-				<div id="clear" class="inconsolata text-light border button">X</div>
+				<div id="clear" class="inconsolata text-light border button pointer">X</div>
 			</div>
 		</div>
 	</div>		
