@@ -40,16 +40,57 @@ window.addEventListener('DOMContentLoaded', () => {
 				responses[0].remove();
 			}
 		}
+
+		hideUiAndResponses() {
+			let ui = document.getElementById("ui");
+			let responses = document.getElementById("responses");
+			ui.classList.remove("show");
+			responses.classList.remove("show");
+			ui.classList.add("hide");
+			responses.classList.add("hide");
+		}
+
+		showModal() {
+			this.hideUiAndResponses();
+			let modal = document.getElementById("modal");
+			modal.classList.remove("hide");
+			modal.classList.add("show");
+		}
+
+		hideModal() {
+			let modal = document.getElementById("modal");
+			modal.classList.remove("show");
+			modal.classList.add("hide");
+		}
+
+		showUiAndResponses() {
+			this.hideModal();
+			let ui = document.getElementById("ui");
+			let responses = document.getElementById("responses");
+			ui.classList.remove("hide");
+			responses.classList.remove("hide");
+			ui.classList.add("show");
+			responses.classList.add("show");
+		}
 	}
 
 	const instance = new Kaleidoscript();
+	const title = document.getElementById("header-text");
 	const submit = document.getElementById("submit-button");
 	const input = document.getElementById("input-field");
-	const clear = document.getElementById("clear")
+	const clear = document.getElementById("clear"); 
 
+	title.addEventListener("click", () => {
+		let modal = document.getElementById("modal");
+		if (modal.classList.contains("hide")) {
+			instance.showModal();
+		} else {
+			instance.showUiAndResponses();
+		}
+	});
 	submit.addEventListener("mouseup", () => { instance.run(input.value) });
 	input.addEventListener("keypress", (event) => {
-		if(event.which == 13 && !event.shiftKey) {
+		if (event.which == 13 && !event.shiftKey) {
 			event.preventDefault();
 			instance.run(input.value);
 		}	

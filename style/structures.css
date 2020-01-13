@@ -89,6 +89,34 @@ header { text-align: center; }
 	padding: 40px;
 }
 
+.tooltip-content { 
+	visibility: hidden; 
+	font-size: 12px;
+	position: absolute;
+	top: 65px;
+}
+
+.tooltip:hover .tooltip-content { visibility: visible; }
+
+
+#modal {
+	height: 100%;
+	width: 100%;
+	font-size: 28px;
+	position: fixed;
+	top: 50px;
+}
+
+.modal-content {
+	width: 50%;
+	margin: 50px auto;
+	line-height: 36px;
+}
+
+.hide { visibility: hidden; }
+
+
+
 @media screen and (min-width: 1024px){	
 
 	body { grid-template-columns: 5% auto 5%; }
